@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --grey: rgb(222, 227, 229);
+}
+
+::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey);
+  border-radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(246, 246, 236);
+}
+
+.bayan__header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.bayan__item {
+  position: relative;
+  display: block;
+  max-width: 290px;
+  padding: 20px 0px;
+}
+
+.bayan__item::after {
+  position: absolute;
+  top: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 10px;
+  background-color: var(--grey);
+}
+
+.bayan__label {
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.bayan .bayan__label {
+  background-image: url(./assets/plus.svg);
+  background-repeat: no-repeat, repeat;
+  background-size: 20px;
+  background-position: right 0 top 50%, 0 0;
+}
+
+.bayan__item .bayan__label,
+.bayan input[type="radio"]:checked ~ .bayan__label {
+  background-image: url(./assets/cross.svg);
+  background-size: 14px;
+}
+
+.bayan__image {
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+}
