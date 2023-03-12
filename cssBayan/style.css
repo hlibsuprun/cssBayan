@@ -147,10 +147,8 @@ input[type="radio"]:checked ~ .bayan__image {
   input[type="radio"]:checked ~ .bayan__image {
     width: 20rem;
   }
-  @media (hover: hover) {
-    .bayan__item:hover .bayan__image {
-      width: 20rem;
-    }
+  .bayan__item:hover .bayan__image {
+    width: 20rem;
   }
 }
 
@@ -173,13 +171,11 @@ input[type="radio"]:checked ~ .bayan__image {
   input[type="radio"]:checked ~ .bayan__label {
     margin-bottom: 2rem;
   }
-  @media (hover: hover) {
-    .bayan__item:hover .bayan__image {
-      width: 30rem;
-    }
-    .bayan__item:hover .bayan__label {
-      margin-bottom: 2rem;
-    }
+  .bayan__item:hover .bayan__image {
+    width: 30rem;
+  }
+  .bayan__item:hover .bayan__label {
+    margin-bottom: 2rem;
   }
 }
 
