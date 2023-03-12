@@ -114,23 +114,24 @@ input[type="radio"]:checked ~ .bayan__image {
   .bayan:hover * {
     cursor: pointer;
   }
-  .bayan:hover .bayan__label {
-    color: var(--black);
-  }
-  .bayan__item:hover .bayan__label {
-    margin-bottom: 1.25rem;
-  }
-  .bayan:hover .bayan__icon {
-    opacity: 1;
-  }
-  .bayan__item:hover .bayan__icon {
-    rotate: 45deg;
-  }
-  .bayan__item:hover .bayan__image {
-    display: block;
-    width: 15rem;
-    opacity: 1;
-  }
+}
+
+.bayan:hover .bayan__label {
+  color: var(--black);
+}
+.bayan__item:hover .bayan__label {
+  margin-bottom: 1.25rem;
+}
+.bayan:hover .bayan__icon {
+  opacity: 1;
+}
+.bayan__item:hover .bayan__icon {
+  rotate: 45deg;
+}
+.bayan__item:hover .bayan__image {
+  display: block;
+  width: 15rem;
+  opacity: 1;
 }
 
 @media (min-width: 820px) {
