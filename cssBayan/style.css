@@ -11,7 +11,6 @@
   --grey: rgb(222, 227, 229);
   --blue: rgb(0, 89, 217);
   --black: rgb(0, 0, 0);
-  --white: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar {
@@ -38,6 +37,7 @@ hr {
   margin: 0;
   width: 100%;
   height: 0.094rem;
+  border: 0;
   border-radius: 0.625rem;
   background-color: var(--grey);
 }
@@ -49,26 +49,21 @@ hr {
   background-color: var(--background);
 }
 
-@media (hover: hover) {
-  .bayan:hover * {
-    cursor: pointer;
-  }
-}
-
 .bayan {
+  width: calc(100vw - 1.875rem);
+  max-width: 30rem;
   height: fit-content;
 }
 
 .bayan__title {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .bayan__item {
-  padding: 1.25em 0;
   display: block;
-  max-width: 18.125rem;
+  padding: 1.25rem 0;
 }
 
 .bayan__label {
@@ -76,27 +71,13 @@ hr {
   justify-content: space-between;
   align-items: center;
   gap: 1.875rem;
-  font-size: 0.875em;
+  font-size: 1rem;
   color: var(--blue);
 }
 
-@media (hover: hover) {
-  .bayan:hover .bayan__label {
-    color: var(--black);
-  }
-  .bayan__item:hover .bayan__label,
-  .bayan:hover input[type="radio"]:checked ~ .bayan__label {
-    margin-bottom: 1.25em;
-  }
-}
-
 input[type="radio"]:checked ~ .bayan__label {
-  margin-bottom: 1.25em;
+  margin-bottom: 1.25rem;
   color: var(--black);
-}
-
-.bayan__item:active .bayan__label {
-  color: rgba(0, 89, 217, 0.8);
 }
 
 .bayan__subtitle {
@@ -110,41 +91,99 @@ input[type="radio"]:checked ~ .bayan__label {
   transition: all 0.3s ease;
 }
 
-@media (hover: hover) {
-  .bayan__item:hover .bayan__icon {
-    rotate: 45deg;
-  }
-  .bayan:hover .bayan__icon {
-    opacity: 1;
-  }
-}
-
 input[type="radio"]:checked + .bayan__label .bayan__icon {
   rotate: 45deg;
-  color: var(--black);
 }
 
 .bayan__image {
   display: block;
-  opacity: 0;
   width: 0;
   margin: 0 auto;
+  opacity: 0;
   transition: all 0.3s ease;
   user-select: none;
 }
 
 input[type="radio"]:checked ~ .bayan__image {
   display: block;
-  width: 10rem;
+  width: 15rem;
   opacity: 1;
 }
 
 @media (hover: hover) {
-  .bayan__item:hover .bayan__image {
-    display: block;
-    width: 10rem;
+  .bayan:hover * {
+    cursor: pointer;
+  }
+  .bayan:hover .bayan__label {
+    color: var(--black);
+  }
+  .bayan__item:hover .bayan__label {
+    margin-bottom: 1.25rem;
+  }
+  .bayan:hover .bayan__icon {
     opacity: 1;
   }
+  .bayan__item:hover .bayan__icon {
+    rotate: 45deg;
+  }
+  .bayan__item:hover .bayan__image {
+    display: block;
+    width: 15rem;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 820px) {
+  .bayan {
+    max-width: 40rem;
+  }
+  .bayan__title {
+    font-size: 2.5rem;
+  }
+  .bayan__label {
+    font-size: 1.25rem;
+  }
+  input[type="radio"]:checked ~ .bayan__image {
+    width: 20rem;
+  }
+  @media (hover: hover) {
+    .bayan__item:hover .bayan__image {
+      width: 20rem;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .bayan {
+    max-width: 60rem;
+  }
+  .bayan__item {
+    padding: 2rem 0;
+  }
+  .bayan__title {
+    font-size: 4rem;
+  }
+  .bayan__label {
+    font-size: 2rem;
+  }
+  input[type="radio"]:checked ~ .bayan__image {
+    width: 30rem;
+  }
+  input[type="radio"]:checked ~ .bayan__label {
+    margin-bottom: 2rem;
+  }
+  @media (hover: hover) {
+    .bayan__item:hover .bayan__image {
+      width: 30rem;
+    }
+    .bayan__item:hover .bayan__label {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.bayan__item:active .bayan__label {
+  color: rgba(0, 89, 217, 0.8);
 }
 
 .bayan__item:active .bayan__image {
