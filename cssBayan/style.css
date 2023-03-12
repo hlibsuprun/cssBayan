@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-
 :root {
   --background: rgb(246, 246, 236);
   --grey: rgb(222, 227, 229);
